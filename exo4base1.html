@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JS exo4 base1 Alex</title>
+        <meta charset="utf-8"/>
+
+
+    </head>
+    <body>
+      <!--Exo4-->
+        <form>
+            <label for="nom">Nom : </label><input type="text" name="nom" id="nom"/>
+            <label for="prenom">Prénom : </label><input type="text" name="prenom" id="prenom"/>
+            <label for="ville">Ville : </label><input type="text" name="ville" id="ville"/>
+            <button onclick="exo4()" type="submit" name="valider" id="valider">Valider</button>
+        </form>
+      <!--/////-->
+
+      <!--Exo5-->
+        <form>
+            <label for="premier_nombre">Premier nombre : </label><input type="text" id="premier_nombre" name="premier_nombre"/><br/>
+            <label for="deuxieme_nombre">Deuxième nombre : </label><input type="text" id="deuxieme_nombre" name="deuxieme_nombre"/><br/>
+            <button onclick="exo5()" id="valider" name ="valider">Valider</button>
+        </form>
+      <!--/////-->
+
+      <!--Exo7-->
+        <form>
+            <label for="pointure">Pointure : </label><input type="text" id="pointure" name="pointure"/><br/>
+            <label for="annee">Année de naissance : </label><input type="text" id="annee" name="annee"/><br/>
+            <button onclick="exo7()" id="valider" name="valider">Valider</button>
+        </form>
+      <!--/////-->
+
+      <!--Exo8-->
+        <form>
+            <label for="age">Votre âge : </label><input type="text" id="age" name="age"/><br/>
+            <button onclick="exo8()" id="valider" name="valider">Valider</button>
+        </form>
+      <!--/////-->
+        <script>
+        //Exo4//////
+            function exo4(){
+                var nom = document.getElementById("nom").value;
+                var prenom = document.getElementById("prenom").value;
+                var ville = document.getElementById("ville").value;
+                alert('Nom: ' + nom + '\n' + 'Prenom: ' + prenom + '\n' + 'Ville: ' + ville);
+            };
+        //Exo5//////
+            function exo5(){
+                var firstnb = document.getElementById("premier_nombre").value;
+                var secondnb = document.getElementById("deuxieme_nombre").value;
+                var resultat = parseInt(firstnb) * secondnb;
+                alert('La multiplication de la partie entière du premier nombre au deuxième nombre donne '+resultat)
+            };
+        //Exo7//////
+            function exo7(){
+                var pointure = document.getElementById("pointure").value;
+                var annee = document.getElementById("annee").value;
+                var result = pointure * 2 + 5 * 50 - annee + 1766;
+                alert('Si on multiplie votre pointure par 2 et que l\'on y ajoute 5, pour le multiplier par 50, ensuite lui soustraire votre année de naissance et enfin y ajouter 1766, on obtient ' + result);
+            };
+        //Exo8//////
+            function exo8(){
+                var age = document.getElementById("age").value;
+                if(age>18 && age<49){
+                    alert('Vous êtes majeur');
+                }
+                else if (age>=49){
+                    alert('Retourne à l\'hospice vieux croulant');
+
+                }
+                else if(age<=18){
+                    alert('Vous êtes mineur');
+                }
+            };
+        </script>
+    </body>
+</html>

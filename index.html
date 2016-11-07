@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JS exos base1 Alex</title>
+        <meta charset="utf-8"/>
+        <script type="text/javascript" src="exo6.js"></script>
+
+    </head>
+    <body>
+
+      <!--Exo6-->
+        <button type="button" onclick="modulo();">%</button>
+      <!--///////-->
+      <!--Exo7-->
+        <button type="button" onclick="calculs();">Pointure et année</button>
+      <!--///////-->
+        <script>
+        //Exo 1////////////////////////
+            var hello = "Hello WOrld!";
+            alert(hello);
+        ///////////////////////////////
+        //Exo2/////////////////////////
+            var nom = 'Tuil \n'
+            var prenom = 'Alexandre \n'
+            var ville = 'Roubaix \n'
+            alert('Nom: '+nom+'Prenom: '+prenom+'Ville: '+ville);
+        ///////////////////////////////
+        //Exo3/////////////////////////
+            var saisie = prompt('Entrez votre prénom')
+            alert('Bonjour '+saisie);
+        ///////////////////////////////
+
+        //Exo5/////////////////////////
+            var nmb1, nbm2;
+            nmb1 = prompt('Entrez un nombre à virgule')
+            nmb2 = prompt('Entrez un second nombre à virgule')
+            var resultat = parseInt(nmb1) * nmb2
+            alert('La multiplication de la partie entière du premier nombre au deuxième nombre donne '+resultat);
+        ///////////////////////////////
+        //Exo6/////////////////////////
+        //cf bouton %//////////////////
+        ///////////////////////////////
+        //Exo7/////////////////////////
+            function calculs(){
+              var pointure, annee;
+                  pointure = prompt('Quelle est votre pointure?')
+                  annee = prompt('Quelle est votre année de naissance?')
+              var result = pointure * 2 + 5 * 50 - annee + 1766;
+              alert('Si on multiplie votre pointure par 2 et que l\'on y ajoute 5, pour le multiplier par 50, ensuite lui soustraire votre année de naissance et enfin y ajouter 1766, on obtient '+result);
+            };
+        ///////////////////////////////
+        //Exo8/////////////////////////
+            var age = prompt('Quel est votre âge?')
+            if(age>=18){
+              alert('Vous êtes majeur!')
+            }
+            else{
+              alert('Vous êtes mineur!')
+            }
+
+
+        </script>
+    </body>
+</html>
